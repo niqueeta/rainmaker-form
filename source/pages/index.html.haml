@@ -5,7 +5,7 @@ title: The Rainmaker Foundation registration form
 / = partial "header"
 
 .container
-	%ul.steps>
+	%ul.steps
 		%li.current>
 			%a{:href=>"#personal-details"} 01. Your Details
 		%li>
@@ -50,31 +50,30 @@ title: The Rainmaker Foundation registration form
 
 	#membership-details.content
 		%h3 How would you like to join the Rainmaker Foundation?
-		%form
-			.option
+		%form.membership-type
+			.option>
+				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"individual"}
 				%i.fa.fa-user
-				%label
-					%input{:type=> "radio", :name=>"membership", :value=>"individual"}
-					Individual
+				%label Individual
 				%ul
 					%li 1 person
-					%li Suggested minimum donation £1,000/year or £85/month
-			.option
+					%li Suggested minimum donation £1,000/year
+
+			.option>
+				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"family"}
 				%i.fa.fa-users
-				%label
-					%input{:type=> "radio", :name=>"membership", :value=>"family"}
-					Family
+				%label Family
 				%ul
-					%li 1 person
-					%li Suggested minimum donation £1,000/year or £85/month
-			.option
-				%i.fa.fa-suitcase
-				%label
-					%input{:type=> "radio", :name=>"membership", :value=>"company"}
-					Company
+					%li 2-4 people
+					%li Suggested minimum donation £3,000/year
+
+			.option>
+				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"company"}
+				%i.fa.fa-briefcase
+				%label Company
 				%ul
-					%li 1 person
-					%li Suggested minimum donation £1,000/year or £85/month
+					%li 1 company
+					%li Suggested minimum donation £6,000/year
 
 	#payment-details.content
 		%form
