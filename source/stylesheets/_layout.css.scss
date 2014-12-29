@@ -1,0 +1,99 @@
+$susy: (
+  columns: 23,
+  gutters: 0,
+  gutter-position: before,
+  global-box-sizing: border-box,
+);
+
+$twelve: (
+  columns: 12,
+  gutters: 1/4,
+  gutter-position: split,
+  global-box-sizing: border-box,
+);
+
+$sans: 'Lato', sans-serif;
+
+$black: #222;
+$white: #fff;
+$light-grey: #f3f3f3;
+
+$green: #33b661;
+$light-green: #ecffe0;
+$pink: #fc5565;
+
+
+$tablet-vertical: 700px;
+$tablet-horizontal: 1020px;
+$desktop: 1280px;
+
+$menu-size: 200px;
+
+$xs: 20px;
+$s: 40px;
+$m: 70px;
+$l: 120px;
+$xl: 160px;
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin circle($width) {
+  width: $width;
+  height: $width;
+  -webkit-border-radius: $width/2;
+     -moz-border-radius: $width/2;
+          border-radius: $width/2;
+}
+
+@mixin arrow-down($size, $color) {
+  content: ' ';
+  width: 0; 
+  height: 0; 
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;    
+  border-top: $size solid $color;
+  position: relative;
+  display: block;
+}
+
+@mixin arrow-up($size, $color) {
+  content: ' ';
+  width: 0; 
+  height: 0;
+  border-top: $size solid transparent; 
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;    
+  border-bottom: $size solid $color;
+  position: relative;
+  display: block;
+}
+
+@mixin arrow-left($size, $color) {
+  content: ' ';
+  width: 0; 
+  height: 0; 
+  border-top: $size solid transparent; 
+  border-left: $size solid transparent;
+  border-right: $size solid $color;    
+  border-bottom: $size solid transparent;
+  position: relative;
+  display: block;
+}
+
+@mixin arrow-right($size, $color) {
+  content: ' ';
+  width: 0; 
+  height: 0; 
+  border-top: $size solid transparent; 
+  border-left: $size solid $color;
+  border-right: $size solid transparent;    
+  border-bottom: $size solid transparent;
+  position: relative;
+  display: block;
+}
