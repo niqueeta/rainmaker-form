@@ -1,0 +1,117 @@
+.container {
+	width: 800px;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+.steps {
+	margin-bottom: 70px;
+
+	li {
+		border-bottom: 3px solid $light-grey;
+		padding-bottom: 15px;
+		width: 33%;
+		display: inline-block;
+		text-align: center;
+		font-size: 13px;
+		font-weight: bold;
+
+		a {
+			color: lighten($medium-grey, 40%);
+		}
+
+		&:last-child {
+			width: 34%;
+		}
+
+		&.current {
+			border-bottom: 3px solid $blue;
+			a {
+				color: $blue;
+			}
+		}
+	}
+}
+
+.content {
+	display: none;
+}
+
+#personal-details {
+	display: block;
+}
+
+#personal-details,
+#membership-details,
+#payment-details {
+
+	form {
+		width: 50%;
+		margin: 0 auto;
+
+		label {
+			font-size: 13px;
+			font-weight: bold;
+			margin-top: 30px;
+			display: block;
+		}
+
+		input[type=text],
+		input[type=date],
+		input[type=email],
+		input[type=tel] {
+			width: 100%;
+			clear: both;
+			display: block;
+			box-shadow: inset 0 1px 0 #d9e1e9;
+			background: $light-grey;
+			color: $medium-grey;
+			font-size: 18px;
+			padding: 14px;
+			border-radius: 3px;
+			border: 0 none;
+			margin-top: 8px;
+		}
+		input[name="postcode"] {
+			width: 50%;
+		}
+	}
+}
+
+#membership-details {
+
+	.option {
+		text-align: center;
+		padding: 25px;
+		background-color: $light-grey;
+
+		i {
+			font-size: 30px;
+			display: block;
+		}
+
+		input {
+			width: auto;
+			margin-right: 5px;
+		}
+
+		label {
+			width: 100%;
+			margin: 10px 0 20px;
+		}
+
+		ul {
+			clear: both;
+
+			li {
+				text-align: left;
+				&:before {
+					@extend .fa;
+					@extend .fa-check;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+

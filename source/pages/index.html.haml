@@ -1,7 +1,85 @@
 ---
-title: Title
+title: The Rainmaker Foundation registration form
 ---
 
-= partial "header"
+/ = partial "header"
 
-= partial "footer"
+.container
+	%ul.steps>
+		%li.current>
+			%a{:href=>"#personal-details"} 01. Your Details
+		%li>
+			%a{:href=>"#membership-details"} 02. Membership
+		%li>
+			%a{:href=>"#payment-details"} 03. Payment
+
+	#personal-details.content
+		%form
+			%label
+				Name
+				%input{:type=> "text", :name=>"name"}
+
+			%label
+				Date of Birth
+				%input{:type=> "date", :name=>"date-of-birth"}
+
+			%label
+				Email
+				%input{:type=> "email", :name=>"email"}
+
+			%label
+				Phone
+				%input{:type=> "tel", :name=>"phone"}
+
+			%label
+				Home Address
+				%input{:type=> "text", :name=>"address-line1"}
+				%input{:type=> "text", :name=>"address-line2"}
+
+			%label
+				Postcode
+				%input{:type=> "text", :name=>"postcode"}
+
+			%label
+				Job Title
+				%input{:type=> "text", :name=>"job-title"}
+
+			%label
+				Who referred you?
+				%input{:type=> "text", :name=>"referral"}
+
+	#membership-details.content
+		%h3 How would you like to join the Rainmaker Foundation?
+		%form
+			.option
+				%i.fa.fa-user
+				%label
+					%input{:type=> "radio", :name=>"membership", :value=>"individual"}
+					Individual
+				%ul
+					%li 1 person
+					%li Suggested minimum donation £1,000/year or £85/month
+			.option
+				%i.fa.fa-users
+				%label
+					%input{:type=> "radio", :name=>"membership", :value=>"family"}
+					Family
+				%ul
+					%li 1 person
+					%li Suggested minimum donation £1,000/year or £85/month
+			.option
+				%i.fa.fa-suitcase
+				%label
+					%input{:type=> "radio", :name=>"membership", :value=>"company"}
+					Company
+				%ul
+					%li 1 person
+					%li Suggested minimum donation £1,000/year or £85/month
+
+	#payment-details.content
+		%form
+			%label
+				Payment
+				%input{:type=> "text", :name=>"name"}
+
+

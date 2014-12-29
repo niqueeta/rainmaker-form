@@ -1,0 +1,77 @@
+$susy: (
+  columns: 12,
+  gutters: 1/3,
+  gutter-position: split,
+  global-box-sizing: border-box,
+);
+
+$sans: Arial, Helvetica, sans-serif;
+
+$black: #222;
+$white: #fff;
+$light-grey: #f7f8f9;
+$medium-grey: #727a7c;
+$blue: #1B7A94;
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin circle($width) {
+  width: $width;
+  height: $width;
+  -webkit-border-radius: $width/2;
+     -moz-border-radius: $width/2;
+          border-radius: $width/2;
+}
+
+@mixin arrow-down($size, $color) {
+  content: ' ';
+  width: 0; 
+  height: 0; 
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;    
+  border-top: $size solid $color;
+  position: relative;
+  display: block;
+}
+
+@mixin arrow-up($size, $color) {
+  content: ' ';
+  width: 0; 
+  height: 0;
+  border-top: $size solid transparent; 
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;    
+  border-bottom: $size solid $color;
+  position: relative;
+  display: block;
+}
+
+@mixin arrow-left($size, $color) {
+  content: ' ';
+  width: 0; 
+  height: 0; 
+  border-top: $size solid transparent; 
+  border-left: $size solid transparent;
+  border-right: $size solid $color;    
+  border-bottom: $size solid transparent;
+  position: relative;
+  display: block;
+}
+
+@mixin arrow-right($size, $color) {
+  content: ' ';
+  width: 0; 
+  height: 0; 
+  border-top: $size solid transparent; 
+  border-left: $size solid $color;
+  border-right: $size solid transparent;    
+  border-bottom: $size solid transparent;
+  position: relative;
+  display: block;
+}

@@ -1,99 +1,69 @@
-$susy: (
-  columns: 23,
-  gutters: 0,
-  gutter-position: before,
-  global-box-sizing: border-box,
-);
-
-$twelve: (
-  columns: 12,
-  gutters: 1/4,
-  gutter-position: split,
-  global-box-sizing: border-box,
-);
-
-$sans: 'Lato', sans-serif;
-
-$black: #222;
-$white: #fff;
-$light-grey: #f3f3f3;
-
-$green: #33b661;
-$light-green: #ecffe0;
-$pink: #fc5565;
-
-
-$tablet-vertical: 700px;
-$tablet-horizontal: 1020px;
-$desktop: 1280px;
-
-$menu-size: 200px;
-
-$xs: 20px;
-$s: 40px;
-$m: 70px;
-$l: 120px;
-$xl: 160px;
-
-@mixin vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+* {  
+  -webkit-font-smoothing: antialiased; 
+  box-sizing: border-box;
 }
 
-@mixin circle($width) {
-  width: $width;
-  height: $width;
-  -webkit-border-radius: $width/2;
-     -moz-border-radius: $width/2;
-          border-radius: $width/2;
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,.container, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video { 
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  font-size: 100%; 
+  font: inherit; 
+  vertical-align: baseline;
+  font-family: $sans;
+  color: $black;
 }
 
-@mixin arrow-down($size, $color) {
-  content: ' ';
-  width: 0; 
-  height: 0; 
-  border-left: $size solid transparent;
-  border-right: $size solid transparent;    
-  border-top: $size solid $color;
-  position: relative;
-  display: block;
+ul, ol, li {
+  list-style: none;
 }
 
-@mixin arrow-up($size, $color) {
-  content: ' ';
-  width: 0; 
-  height: 0;
-  border-top: $size solid transparent; 
-  border-left: $size solid transparent;
-  border-right: $size solid transparent;    
-  border-bottom: $size solid $color;
-  position: relative;
-  display: block;
+html, body, .content {
+  height: 100%;
 }
 
-@mixin arrow-left($size, $color) {
-  content: ' ';
-  width: 0; 
-  height: 0; 
-  border-top: $size solid transparent; 
-  border-left: $size solid transparent;
-  border-right: $size solid $color;    
-  border-bottom: $size solid transparent;
-  position: relative;
-  display: block;
+h1, h2 {
+  font-family: $sans;
 }
 
-@mixin arrow-right($size, $color) {
-  content: ' ';
-  width: 0; 
-  height: 0; 
-  border-top: $size solid transparent; 
-  border-left: $size solid $color;
-  border-right: $size solid transparent;    
-  border-bottom: $size solid transparent;
-  position: relative;
-  display: block;
+h4, p, li {
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+p, li {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+p {
+  margin-top: 1em;
+}
+
+li {
+  margin-top: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+
+  img {
+    width: 160px;
+  }
 }
