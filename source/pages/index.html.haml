@@ -50,6 +50,7 @@ title: The Rainmaker Foundation registration form
 
 	#membership-details.content
 		%h3 How would you like to join the Rainmaker Foundation?
+
 		%form.membership-type
 			.option>
 				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"individual"}
@@ -75,10 +76,82 @@ title: The Rainmaker Foundation registration form
 					%li 1 company
 					%li Suggested minimum donation £6,000/year
 
-	#payment-details.content
-		%form
-			%label
-				Payment
-				%input{:type=> "text", :name=>"name"}
+		%fieldset.family
+
+			%form.family-member
+				%label
+					%input{:type=>"checkbox", :name=>"family-member", :value=>"partner", :checked=>"checked"}
+					Your partner's details
+
+			%form.partner-details
+				%label
+					Name
+					%input{:type=> "text", :name=>"partner-name"}
+
+				%label
+					Date of Birth
+					%input{:type=> "date", :name=>"partner-date-of-birth"}
+
+				%label
+					Email
+					%input{:type=> "email", :name=>"partner-email"}
+
+				%label
+					Phone
+					%input{:type=> "tel", :name=>"partner-phone"}
+
+				%label
+					Job Title
+					%input{:type=> "text", :name=>"partner-job-title"}
+
+				%label.partner-address
+					Home Address
+					%input{:type=> "text", :name=>"partner-address-line1"}
+					%input{:type=> "text", :name=>"partner-address-line2"}
+
+				%label.partner-address
+					Postcode
+					%input{:type=> "text", :name=>"partner-postcode"}
+
+				%label
+					%input{:type=>"checkbox", :name=>"same-address", :checked=>"checked"}
+					My partner's address is the same as mine
+
+			%form.family-member
+				%label
+					%input{:type=>"checkbox", :name=>"family-member", :value=>"child1"}
+					Your child's details
+
+			%form.child1-details
+				%label
+					Name
+					%input{:type=> "text", :name=>"child1-name"}
+
+				%label
+					Date of Birth
+					%input{:type=> "date", :name=>"child1-date-of-birth"}
+
+				%label
+					School
+					%input{:type=> "email", :name=>"child1-school"}
+
+			%form.family-member
+				%label
+					%input{:type=>"checkbox", :name=>"family-member", :value=>"child2"}
+					Your child's details
+
+			%form.child2-details
+				%label
+					Name
+					%input{:type=> "text", :name=>"child2-name"}
+
+				%label
+					Date of Birth
+					%input{:type=> "date", :name=>"child2-date-of-birth"}
+
+				%label
+					School
+					%input{:type=> "email", :name=>"child2-school"}
+
 
 

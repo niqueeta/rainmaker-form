@@ -46,13 +46,18 @@
 #payment-details {
 
 	form {
+		width: 50%;
+		margin: 0 auto;
+
 		label {
-			width: 50%;
-			margin: 0 auto;
 			font-size: 13px;
 			font-weight: bold;
 			margin-top: 30px;
 			display: block;
+		}
+
+		input[type=checkbox] {
+			margin-right: 5px;
 		}
 
 		input[type=text],
@@ -71,16 +76,35 @@
 			border: 0 none;
 			margin-top: 8px;
 		}
-		input[name="postcode"] {
-			width: 50%;
+		input[name="postcode"],
+		input[name="date-of-birth"] {
+			width: 55%;
 		}
 	}
 }
 
 #membership-details {
 
-	.membership-type {
-		text-align: center;
+	.partner-address {
+		display: none;
+	}
+
+	.child1-details,
+	.child2-details {
+		display: none;
+	}
+
+	.family-member {
+		width: 100%;
+		padding-bottom: 20px;
+		display: inline-block;
+		border-bottom: 2px solid $light-grey;
+		margin-top: 40px;
+
+		label {
+			font-size: 18px;
+			font-weight: bold;
+		}
 	}
 
 	h3 {
@@ -89,55 +113,63 @@
 		margin-bottom: 10px;
 	}
 
-	.option {
-		width: 32%;
-		display: inline-block;
+	.membership-type {
+		width: 100%;
 		text-align: center;
-		padding: 25px;
-		background-color: $light-grey;
-		border: 2px solid $light-grey;
-		margin-bottom: 40px;
 
-		&:nth-child(2) {
-			margin: 2%;
-		}
+		.option {
+			width: 32%;
+			border-radius: 5px;
+			cursor: pointer;
+			display: inline-block;
+			text-align: center;
+			padding: 25px;
+			border: 2px solid $light-grey;
 
-		i {
-			font-size: 30px;
-			margin-top: 20px;
-			display: block;
-		}
+			&:nth-child(2) {
+				margin: 2%;
+			}
 
-		input {
-			width: 100%;
-			text-align: left;
-		}
+			i {
+				font-size: 30px;
+				margin-top: 20px;
+				display: block;
+			}
 
-		label {
-			width: 100%;
-			margin: 10px 0 40px;
-		}
-
-		ul {
-			clear: both;
-
-			li {
+			input {
+				width: 100%;
 				text-align: left;
-				color: $medium-grey;
-				&:before {
-					@extend .fa;
-					@extend .fa-check;
-					margin-right: 5px;
+			}
+
+			label {
+				width: 100%;
+				font-size: 15px;
+				margin: 10px 0 40px;
+			}
+
+			ul {
+				clear: both;
+
+				li {
+					text-align: left;
+					color: $medium-grey;
+					&:before {
+						@extend .fa;
+						@extend .fa-check;
+						margin-right: 5px;
+					}
 				}
 			}
-		}
 
-		&:hover, 
-		&.selected {
-			border-color: $blue;
+			&:hover {
+				background-color: $light-grey;
+			}
 
-			i, label, ul li {
-				color: $blue;
+			&.selected {
+				border-color: $blue;
+				i {
+					color: $blue;
+				}
 			}
 		}
 	}
