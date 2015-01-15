@@ -1,0 +1,61 @@
+#step3.content
+
+	%fieldset
+		%legend
+			How often would you like to donate?
+		%form
+			%label 
+				%input{:type=> "radio", :name=>"donation-frequency", :value=>"annual"}
+				Annualy
+
+			%label 
+				%input{:type=> "radio", :name=>"donation-frequency", :value=>"monthly"}
+				Monthly
+
+	%fieldset
+		%legend
+			How much would you like to donate?
+		%form
+			%label 
+				%input{:type=> "radio", :name=>"donation-amount", :value=>"1000"}
+				£1,000 / year
+
+			%label 
+				%input{:type=> "radio", :name=>"donation-amount", :value=>"1000"}
+				£3,000 / year
+
+			%label 
+				%input{:type=> "radio", :name=>"donation-amount", :value=>"1000"}
+				£5,000 / year
+
+			%label 
+				%input{:type=> "radio", :name=>"donation-amount", :value=>"other"}
+				£
+				%input{:type=> "text", :name=>"other-amount"}
+				per year
+
+	%fieldset
+		%legend
+			How would you like to pay?
+
+		%form
+			%label
+				%input.pay-method{:type=> "radio", :name=>"donation-method", :value=>"direct-debit"}
+				Direct Debit
+
+			%label
+				%input.pay-method{:type=> "radio", :name=>"donation-method", :value=>"credit-card"}
+				Credit Card
+				%span 
+					You will be redirected to a PayPal payment page
+					%i
+
+			%label
+				%input.pay-method{:type=> "radio", :name=>"donation-method", :value=>"cheque"}
+				Cheque
+
+	%fieldset.payment-instructions
+		%legend
+			Great! We will send you an email with instructions for how to pay via direct Debit.
+			%label
+				%input{:type=>"submit",  :name=>"join", :value=>"Join the Rainmaker Foundation"}

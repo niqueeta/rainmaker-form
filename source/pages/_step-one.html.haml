@@ -1,0 +1,149 @@
+#step1.content
+	%fieldset.membership-type
+		%legend
+			How would you like to join the Rainmaker Foundation?
+
+		%form
+			.option>
+				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"individual"}
+				%i.fa.fa-user
+				%label Individual
+				%ul
+					%li 1 person
+					%li Suggested minimum donation £1,000/year
+
+			.option>
+				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"family"}
+				%i.fa.fa-users
+				%label Family
+				%ul
+					%li 2-4 people
+					%li Suggested minimum donation £3,000/year
+
+			.option>
+				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"company"}
+				%i.fa.fa-briefcase
+				%label Company
+				%ul
+					%li 1 company
+					%li Suggested minimum donation £6,000/year
+
+	%fieldset.personal-details
+		%legend
+			Personal Details
+
+		%form
+			%label
+				Name
+				%input{:type=> "text", :name=>"name"}
+
+			%label
+				Date of Birth
+				%input{:type=> "date", :name=>"date-of-birth"}
+
+			%label
+				Email
+				%input{:type=> "email", :name=>"email"}
+
+			%label
+				Phone
+				%input{:type=> "tel", :name=>"phone"}
+
+			%label
+				Home Address
+				%input{:type=> "text", :name=>"address-line1"}
+				%input{:type=> "text", :name=>"address-line2"}
+
+			%label
+				Postcode
+				%input{:type=> "text", :name=>"postcode"}
+
+			%label
+				Job Title
+				%input{:type=> "text", :name=>"job-title"}
+
+			%label
+				Who referred you?
+				%input{:type=> "text", :name=>"referral"}
+
+	%fieldset.partner
+		%form.family-member
+			%label
+				%input{:type=>"checkbox", :name=>"family-member", :value=>"partner", :checked=>"checked"}
+				I have a partner
+
+		%form.partner-details
+			%label
+				Name
+				%input{:type=> "text", :name=>"partner-name"}
+
+			%label
+				Date of Birth
+				%input{:type=> "date", :name=>"partner-date-of-birth"}
+
+			%label
+				Email
+				%input{:type=> "email", :name=>"partner-email"}
+
+			%label
+				Phone
+				%input{:type=> "tel", :name=>"partner-phone"}
+
+			%label
+				Job Title
+				%input{:type=> "text", :name=>"partner-job-title"}
+
+			%label.partner-address
+				Home Address
+				%input{:type=> "text", :name=>"partner-address-line1"}
+				%input{:type=> "text", :name=>"partner-address-line2"}
+
+			%label.partner-address
+				Postcode
+				%input{:type=> "text", :name=>"partner-postcode"}
+
+			%label
+				%input{:type=>"checkbox", :name=>"same-address", :checked=>"checked"}
+				My partner's address is the same as mine
+			
+			%label
+				%input{:type=>"checkbox", :name=>"young-rainmakers-workshop"}
+				Yes, I know a young person aged 11-16 who may be interested in a 'Young Rainmakers Workshop'
+
+	%fieldset.child1
+		%form.family-member
+			%label
+				%input{:type=>"checkbox", :name=>"family-member", :value=>"child1"}
+				I have a child
+
+		%form.child1-details
+			%label
+				Name
+				%input{:type=> "text", :name=>"child1-name"}
+
+			%label
+				Date of Birth
+				%input{:type=> "date", :name=>"child1-date-of-birth"}
+
+			%label
+				School
+				%input{:type=> "email", :name=>"child1-school"}
+	
+	%fieldset.child2
+		%form.family-member
+			%label
+				%input{:type=>"checkbox", :name=>"family-member", :value=>"child2"}
+				I have another child
+
+		%form.child2-details
+			%label
+				Name
+				%input{:type=> "text", :name=>"child2-name"}
+
+			%label
+				Date of Birth
+				%input{:type=> "date", :name=>"child2-date-of-birth"}
+
+			%label
+				School
+				%input{:type=> "email", :name=>"child2-school"}
