@@ -4,52 +4,52 @@
 			What charity sectors are you interested in?
 		%form
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"children-and-young-people"}
 				%i.fa.fa-user
 				%label Children and Young People
 
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"climate-energy-and-environment"}
 				%i.fa.fa-user
 				%label Climate, Energy &amp; Environment
 
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"responsible-economic-development"}
 				%i.fa.fa-user
 				%label Responsible Economic Development
 
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"global-health"}
 				%i.fa.fa-user
 				%label Global Health
 
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"human-rights"}
 				%i.fa.fa-user
 				%label Human Rights
 
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"education"}
 				%i.fa.fa-user
 				%label Education
 
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"social-change"}
 				%i.fa.fa-user
 				%label Social Change
 
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"media-arts-and-culture"}
 				%i.fa.fa-user
 				%label Media, Arts &amp; Culture
 
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"inspire-me"}
 				%i.fa.fa-user
 				%label Don't know, inspire me!
 
 			.option>
-				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"other"}
 				%i.fa.fa-user
 				%label 
 					%input{:type=> "text", :name=>"other-charity-sector"}
@@ -57,6 +57,8 @@
 	%fieldset.charities-involved
 		%legend
 			What charities, if any, are you involved with already?
+			%span 
+				Optional
 		%form
 			%label
 				%input{:type=> "text", :name=>"charities-already-involved-with"}
@@ -66,27 +68,27 @@
 			As a Rainmaker, what are you most interested in?
 		%form
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"rainmaker-interests", :value=>"attending-events"}
 				Attending events and meeting other rainmakers
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"rainmaker-interests", :value=>"growing-community"}
 				Growing the rainmaker community
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"rainmaker-interests", :value=>"donating-to-charities"}
 				Donating to charities
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"rainmaker-interests", :value=>"opening-personal-account"}
 				Opening a personal charity account
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"rainmaker-interests", :value=>"receiving-bespoke-advice"}
 				Receiving bespoke donor advice
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"rainmaker-interests", :value=>"donating-time"}
 				Donating my time
 
 	%fieldset.areas-of-expertise
@@ -94,27 +96,27 @@
 			What are your areas of expertise?
 		%form
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"ceo"}
 				CEO
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"accounting"}
 				Accounting
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"hr"}
 				HR
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"legal"}
 				Legal
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"other"}
 				Other
-				%input{:type=> "text", :name=>"other-area-of-expertise"}
+				%input.other{:type=> "text", :name=>"other-area-of-expertise"}
 
-	%fieldset
+	%fieldset.family
 		%legend
 			As a Rainmaker, what is your partner most interested in?
 
@@ -125,30 +127,30 @@
 
 		%form.partner-interests
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>""}
 				Attending events and meeting other rainmakers
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>""}
 				Growing the rainmaker community
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>""}
 				Donating to charities
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>""}
 				Opening a personal charity account
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>""}
 				Receiving bespoke donor advice
 
 			%label 
-				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
+				%input{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"donating-time"}
 				Donating my time
 
-	%fieldset.partner-areas-of-expertise
+	%fieldset.partner-areas-of-expertise.family
 		%legend
 			What are your partner's areas of expertise?
 		%form
@@ -171,4 +173,4 @@
 			%label 
 				%input{:type=> "checkbox", :name=>"charity-sector-interests", :value=>""}
 				Other
-				%input{:type=> "text", :name=>"other-area-of-expertise"}
+				%input.other{:type=> "text", :name=>"other-area-of-expertise"}

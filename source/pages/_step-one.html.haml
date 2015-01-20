@@ -28,7 +28,7 @@
 					%li 1 company
 					%li Suggested minimum donation £6,000/year
 
-	%fieldset.personal-details
+	%fieldset#personal-details
 		%legend
 			Personal Details
 
@@ -66,7 +66,7 @@
 				Who referred you?
 				%input{:type=> "text", :name=>"referral"}
 
-	%fieldset.partner
+	%fieldset#partner.family
 		%form.family-member
 			%label
 				%input{:type=>"checkbox", :name=>"family-member", :value=>"partner", :checked=>"checked"}
@@ -110,7 +110,7 @@
 				%input{:type=>"checkbox", :name=>"young-rainmakers-workshop"}
 				Yes, I know a young person aged 11-16 who may be interested in a 'Young Rainmakers Workshop'
 
-	%fieldset.child1
+	%fieldset#child1.family
 		%form.family-member
 			%label
 				%input{:type=>"checkbox", :name=>"family-member", :value=>"child1"}
@@ -129,7 +129,7 @@
 				School
 				%input{:type=> "email", :name=>"child1-school"}
 	
-	%fieldset.child2
+	%fieldset#child2.family
 		%form.family-member
 			%label
 				%input{:type=>"checkbox", :name=>"family-member", :value=>"child2"}

@@ -2,17 +2,39 @@ body {
 	background-color: $light-grey;
 }
 
+header {
+	background-color: $white;
+	margin-bottom: 20px;
+	@include clearfix;
+}
+
 .container {
 	width: 800px;
 	margin: 0 auto;
 }
 
+.logo,
 .steps {
-	margin-bottom: 20px;
+	display: inline-block;
+	padding: 30px 20px 20px;
+}
+
+.logo {
+  float: left;
+
+  img {
+    width: 180px;
+  }
+}
+
+.steps {
 	background-color: $white;
+	text-align: center;
+	float: right;
 
 	li {
-		width: 33%;
+		width: 60px;
+		margin-left: 20px;
 		display: inline-block;
 		font-size: 13px;
 		font-weight: bold;
@@ -21,20 +43,16 @@ body {
 			width: 100%;
 			display: block;
 			color: lighten($medium-grey, 40%);
-			padding-bottom: 20px;
-			padding-top: 10px;
+			padding-bottom: 10px;
 			text-align: center;
 
 		}
 
-		&:last-child {
-			width: 34%;
-		}
-
 		&.current {
-			background-color: $black;
+			border-bottom: 2px solid $black;
+
 			a {
-				color: $white;
+				color: $black;
 			}
 		}
 	}
@@ -62,8 +80,35 @@ fieldset {
 		width: 100%;
 		float: left;
 		margin-bottom: 30px;
-		font-size: 28px;
+		font-size: 26px;
 	}
+}
+
+// #personal-details,
+// #partner,
+// #child1,
+// #child2 {
+// 	display: none;
+// }
+
+.child1-details,
+.child2-details {
+	display: none;
+}
+
+.areas-of-expertise,
+.partner-areas-of-expertise {
+	display: none;
+}
+
+.call-to-action {
+	border: none;
+	padding: 30px;
+	background-color: $blue;
+	font-family: $sans;
+	margin-top: 20px;
+	border-radius: 10px;
+	color: $white;
 }
 
 form {
@@ -80,7 +125,8 @@ form {
 		}
 	}
 
-	input[type=checkbox] {
+	input[type=checkbox],
+	input[type=radio] {
 		margin-right: 5px;
 	}
 
@@ -105,14 +151,18 @@ form {
 	input[type="date"] {
 		width: 55%;
 	}
+
+	input.other {
+		display: inline;
+		width: 60%;
+		margin: 0 5px;
+		&.amount {
+			width: 30%;
+		}
+	}
 }
 
 .partner-address {
-	display: none;
-}
-
-.child1-details,
-.child2-details {
 	display: none;
 }
 
@@ -128,6 +178,15 @@ h3 {
 	font-size: 13px;
 	font-weight: bold;
 	margin-bottom: 10px;
+}
+
+span {
+	clear: both;
+	font-size: 12px;
+	font-style: italic;
+	margin-left: 5px;
+	font-weight: normal;
+	font-color: $medium-grey;
 }
 
 

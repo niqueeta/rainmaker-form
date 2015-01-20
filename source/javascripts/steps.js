@@ -18,23 +18,22 @@ $(document).ready(function() {
 $('.membership-type .option').click(function (e) {
 	$(this).siblings().removeClass("selected");
 	$(this).addClass("selected");
-    $(this).find('.option-radio').prop('checked', true);
- });
+  $(this).find('.option-radio').prop('checked', true);
+});
 
-$('.membership-type .option').click(function (e) {
-	if( $('.membership-type input[value=family]').is(':checked')) {
-		$('.partner').css("diplay", "block");
-		$('.child1').css("diplay", "block");
-		$('.chold2').css("diplay", "block");
+// $('.membership-type .option').click(function (e) {
+// 	if( $('.membership-type input[value=family]').is(':checked')) {
+// 		$('#personal-details').css("display", "block");
+// 		$('.family').css("display", "block");
+// 	} else {
+// 		$('#personal-details').css("display", "block");
+// 		$('.family').css("display", "none");
+// 	}
+// });
 
-	} else {
-		$('.partner').css("diplay", "block");
-		$('.child1').css("diplay", "block");
-		$('.chold2').css("diplay", "block");
-	}
-
- });
-
+$('input.other').click(function (e) {
+	$(this).siblings().prop('checked', true);
+});
 
 
 $('.charity-sectors .option').click(function (e) {
@@ -59,6 +58,17 @@ $('input[name=same-address]').click(function (e) {
 });
 
 
+
+$('.input[name=rainmaker-interests value=donating-time]').click(function (e) {
+	if( $(this).is(':checked')) {
+		$(".areas-of-expertise").css("display", "block");
+	} else {
+		$(".areas-of-expertise").css("display", "none");
+	}
+});
+
+
+
 // Shows/hides partner and children details on selection
 
 $('input[value=partner]').click(function (e) {
@@ -69,9 +79,9 @@ $('input[value=partner]').click(function (e) {
 	}
 });
 
-$('input[value=child1]').click(function (e) {
+$('.show-child1').click(function (e) {
 	if( $(this).is(':checked')) {
-		$(".child1-details").css("display", "block");
+		$("body").css("border", "3px solid red");
 	} else {
 		$(".child1-details").css("display", "none");
 	}

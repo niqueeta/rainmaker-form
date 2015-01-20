@@ -1,5 +1,4 @@
 #step3.content
-
 	%fieldset
 		%legend
 			How often would you like to donate?
@@ -21,17 +20,17 @@
 				£1,000 / year
 
 			%label 
-				%input{:type=> "radio", :name=>"donation-amount", :value=>"1000"}
+				%input{:type=> "radio", :name=>"donation-amount", :value=>"3000"}
 				£3,000 / year
 
 			%label 
-				%input{:type=> "radio", :name=>"donation-amount", :value=>"1000"}
+				%input{:type=> "radio", :name=>"donation-amount", :value=>"5000"}
 				£5,000 / year
 
 			%label 
-				%input{:type=> "radio", :name=>"donation-amount", :value=>"other"}
+				%input{:type=> "radio", :name=>"donation-amount", :value=>"other-amount"}
 				£
-				%input{:type=> "text", :name=>"other-amount"}
+				%input.other.amount{:type=> "text", :name=>"other-amount"}
 				per year
 
 	%fieldset
@@ -58,4 +57,4 @@
 		%legend
 			Great! We will send you an email with instructions for how to pay via direct Debit.
 			%label
-				%input{:type=>"submit",  :name=>"join", :value=>"Join the Rainmaker Foundation"}
+				%input.call-to-action{:type=>"submit",  :name=>"join", :value=>"Join the Rainmaker Foundation"}
