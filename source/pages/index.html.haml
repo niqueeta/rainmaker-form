@@ -7,13 +7,14 @@ title: The Rainmaker Foundation registration form
 		%img{:src=>"/images/logo-rainmaker.jpg"}
 	%ul.steps
 		%li.tab-step1.current>
-			%a Step 01
+			%a 1. Personal Details
 		%li.tab-step2>
-			%a Step 02
+			%a 2. Membership
 		%li.tab-step3>
-			%a Step 03
+			%a 3. Payment
 
 .container
-	= partial "step-one"
-	= partial "step-two"
-	= partial "step-three"
+	%form{:action=>"/", :method=>"post", }
+		= partial "step-one"
+		= partial "step-two"
+		= partial "step-three"

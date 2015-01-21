@@ -5,52 +5,52 @@
 		%form
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"children-and-young-people"}
-				%i.fa.fa-user
+				%i.fa.fa-child
 				%label Children and Young People
 
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"climate-energy-and-environment"}
-				%i.fa.fa-user
+				%i.fa.fa-tree
 				%label Climate, Energy &amp; Environment
 
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"responsible-economic-development"}
-				%i.fa.fa-user
+				%i.fa.fa-bank
 				%label Responsible Economic Development
 
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"global-health"}
-				%i.fa.fa-user
+				%i.fa.fa-stethoscope
 				%label Global Health
 
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"human-rights"}
-				%i.fa.fa-user
+				%i.fa.fa-legal
 				%label Human Rights
 
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"education"}
-				%i.fa.fa-user
+				%i.fa.fa-graduation-cap
 				%label Education
 
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"social-change"}
-				%i.fa.fa-user
+				%i.fa.fa-group
 				%label Social Change
 
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"media-arts-and-culture"}
-				%i.fa.fa-user
+				%i.fa.fa-paint-brush
 				%label Media, Arts &amp; Culture
 
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"inspire-me"}
-				%i.fa.fa-user
+				%i.fa.fa-magic
 				%label Don't know, inspire me!
 
 			.option>
 				%input.option-checkbox{:type=> "checkbox", :name=>"charity-sector-interests", :value=>"other"}
-				%i.fa.fa-user
+				%i.fa.fa-lightbulb-o
 				%label 
 					%input{:type=> "text", :name=>"other-charity-sector"}
 	
@@ -116,14 +116,69 @@
 				Other
 				%input.other{:type=> "text", :name=>"other-area-of-expertise"}
 
-	%fieldset.family
+	%fieldset.charity-sectors.family
 		%legend
-			As a Rainmaker, what is your partner most interested in?
-
+			What charity sectors is your partner interested in?
 		%form
-			%label
+			%label.hide
 				%input{:type=>"checkbox", :name=>"partner-interests", :value=>"enter-partner-interests-later"}
 				I would rather not enter my partner's interests at this point.
+
+		%form.partner-interests
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"children-and-young-people"}
+				%i.fa.fa-child
+				%label Children and Young People
+
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"climate-energy-and-environment"}
+				%i.fa.fa-tree
+				%label Climate, Energy &amp; Environment
+
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"responsible-economic-development"}
+				%i.fa.fa-bank
+				%label Responsible Economic Development
+
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"global-health"}
+				%i.fa.fa-stethoscope
+				%label Global Health
+
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"human-rights"}
+				%i.fa.fa-legal
+				%label Human Rights
+
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"education"}
+				%i.fa.fa-graduation-cap
+				%label Education
+
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"social-change"}
+				%i.fa.fa-group
+				%label Social Change
+
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"media-arts-and-culture"}
+				%i.fa.fa-paint-brush
+				%label Media, Arts &amp; Culture
+
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"inspire-me"}
+				%i.fa.fa-magic
+				%label Don't know, inspire me!
+
+			.option>
+				%input.option-checkbox{:type=> "checkbox", :name=>"partner-charity-sector-interests", :value=>"other"}
+				%i.fa.fa-lightbulb-o
+				%label 
+					%input{:type=> "text", :name=>"other-charity-sector"}
+
+	%fieldset.family.partner-interests
+		%legend
+			As a Rainmaker, what is your partner most interested in?
 
 		%form.partner-interests
 			%label 
@@ -173,7 +228,7 @@
 			%label 
 				%input{:type=> "checkbox", :name=>"partner-areas-of-expertise", :value=>"other"}
 				Other
-				%input.other{:type=> "text", :name=>"other-area-of-expertise"}
+				%input.other{:type=> "text", :name=>"partner-other-area-of-expertise"}
 
 	%a.go-to-step{:href=>"#step3"}
 		Go to Step 3 of 3

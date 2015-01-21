@@ -1,14 +1,32 @@
-// Tabs show/hide steps
-$(document).ready(function() {
-  $(".steps a").click(function(event) {
-    event.preventDefault();
-    $(this).parent().addClass("current");
-    $(this).parent().siblings().removeClass("current");
+$("a.go-to-step").click(function(event) {
+	event.preventDefault();
+	var active = $(this).attr("href");
+	$(".content").not(active).css("display", "none");
+	$(active).fadeIn();
 
-    var active = $(this).attr("href");
-    $(".content").not(active).css("display", "none");
-    $(active).fadeIn();
-  });
+	if( active === "#step1" ){
+		$(".tab-step1").addClass("current");
+		$(".tab-step1").siblings().removeClass("current");
+
+	}if( active === "#step2" ){
+		$(".tab-step2").addClass("current");
+		$(".tab-step2").siblings().removeClass("current");
+
+	}	if( active === "#step3" ){
+		$(".tab-step3").addClass("current");
+		$(".tab-step3").siblings().removeClass("current");
+	}
+});
+
+$('input[name=method-of-contact').click(function (e) {
+	if ( $(this).is(':checked') ) {
+		$(this).siblings().css("display", "block");
+	} else {
+		$(this).siblings().css("display", "none");
+	}
+
+	$('input[name=method-of-contact]').not($(this)).siblings().css("display", "none");
+	$(this).siblings().css("display", "block");
 });
 
 // final step instructions
@@ -107,14 +125,12 @@ $('.membership-type .option').click(function (e) {
 	$(this).siblings().removeClass("selected");
 	$(this).addClass("selected");
   $(this).find('.option-radio').prop('checked', true);
-});
+  $('.go-to-step[href="#step2"]').css("display", "block");
+  $('#personal-details').css("display", "block");
 
-$('.membership-type .option').click(function (e) {
-	if( $('.membership-type input[value=family]').is(':checked')) {
-		$('#personal-details').css("display", "block");
+	if( $('.membership-type input[value=family]').is(':checked')) {	
 		$('.family').css("display", "block");
 	} else {
-		$('#personal-details').css("display", "block");
 		$('.family').css("display", "none");
 	}
 });

@@ -13,24 +13,30 @@ How would you like to join the Rainmaker Foundation?
 </legend>
 <form><div class='option'>
 <input class='option-radio' name='membership' type='radio' value='individual'>
+<div class='icon'>
 <i class='fa fa-user'></i>
 <label>Individual</label>
+</div>
 <ul>
 <li>1 person</li>
 <li>Suggested minimum donation £1,000/year</li>
 </ul>
 </div><div class='option'>
 <input class='option-radio' name='membership' type='radio' value='family'>
+<div class='icon'>
 <i class='fa fa-users'></i>
 <label>Family</label>
+</div>
 <ul>
 <li>2-4 people</li>
 <li>Suggested minimum donation £3,000/year</li>
 </ul>
 </div><div class='option'>
 <input class='option-radio' name='membership' type='radio' value='company'>
+<div class='icon'>
 <i class='fa fa-briefcase'></i>
 <label>Company</label>
+</div>
 <ul>
 <li>1 company</li>
 <li>Suggested minimum donation £6,000/year</li>
@@ -51,14 +57,6 @@ Date of Birth
 <input name='date-of-birth' type='date'>
 </label>
 <label>
-Email
-<input name='email' type='email'>
-</label>
-<label>
-Phone
-<input name='phone' type='tel'>
-</label>
-<label>
 Home Address
 <input name='address-line1' type='text'>
 <input name='address-line2' type='text'>
@@ -75,6 +73,22 @@ Job Title / Company
 How did you hear about us?
 <span>please specify any names or Rainmaker references</span>
 <input name='referral' type='text'>
+</label>
+<label>
+<input name='method-of-contact' type='radio' value='phone'>
+Contact me by phone
+<input name='phone' type='tel'>
+<label class='inner'>
+<input name='time-of-contact' type='radio' value='am'>
+AM
+<input checked='checked' name='time-of-contact' type='radio' value='pm'>
+PM
+</label>
+</label>
+<label>
+<input checked='checked' name='method-of-contact' type='radio' value='email'>
+Contact me by email
+<input name='email' type='email'>
 </label>
 </form>
 </fieldset>
@@ -169,10 +183,10 @@ School
 </label>
 </form>
 </fieldset>
-<div class='go-to-step two'>
-Next step
+<a class='go-to-step' href='#step2'>
+Go to Step 2 of 3
 <i class='fa fa-arrow-right'></i>
-</div>
+</a>
 </div>
 
 <script src="/javascripts/all.js" type="text/javascript"></script>
