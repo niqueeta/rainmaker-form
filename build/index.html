@@ -182,6 +182,10 @@ School
 </label>
 </form>
 </fieldset>
+<div class='go-to-step two'>
+Next step
+<i class='fa fa-arrow-right'></i>
+</div>
 </div>
 
 <div class='content' id='step2'>
@@ -370,6 +374,14 @@ Other
 </label>
 </form>
 </fieldset>
+<div class='go-to-step two'>
+Next step
+<i class='fa fa-arrow-right'></i>
+</div>
+<div class='go-to-step one back'>
+<i class='fa fa-arrow-left'></i>
+Go Back
+</div>
 </div>
 
 <div class='content' id='step3'>
@@ -377,9 +389,9 @@ Other
 <legend>
 How often would you like to donate?
 </legend>
-<form>
+<form class='frequency'>
 <label>
-<input name='donation-frequency' type='radio' value='annual'>
+<input checked='checked' name='donation-frequency' type='radio' value='annual'>
 Annualy
 </label>
 <label>
@@ -392,18 +404,18 @@ Monthly
 <legend>
 How much would you like to donate?
 </legend>
-<form>
+<form class='donation-amount'>
 <label>
 <input name='donation-amount' type='radio' value='1000'>
 £1,000 / year
 </label>
 <label>
 <input name='donation-amount' type='radio' value='3000'>
-£3,000 / year
+£1,500 / year
 </label>
 <label>
 <input name='donation-amount' type='radio' value='5000'>
-£5,000 / year
+£2,000 / year
 </label>
 <label>
 <input name='donation-amount' type='radio' value='other-amount'>
@@ -417,13 +429,13 @@ per year
 <legend>
 How would you like to pay?
 </legend>
-<form>
+<form class='pay-method'>
 <label>
-<input class='pay-method' name='donation-method' type='radio' value='direct-debit'>
+<input name='donation-method' type='radio' value='direct-debit'>
 Direct Debit
 </label>
 <label>
-<input class='pay-method' name='donation-method' type='radio' value='credit-card'>
+<input name='donation-method' type='radio' value='credit-card'>
 Credit Card
 <span>
 You will be redirected to a PayPal payment page
@@ -431,12 +443,12 @@ You will be redirected to a PayPal payment page
 </span>
 </label>
 <label>
-<input class='pay-method' name='donation-method' type='radio' value='cheque'>
+<input name='donation-method' type='radio' value='cheque'>
 Cheque
 </label>
 </form>
 </fieldset>
-<fieldset class='payment-instructions'>
+<fieldset id='last-step'>
 <legend>
 Great! We will send you an email with instructions for how to pay via direct Debit.
 <label>
@@ -444,6 +456,10 @@ Great! We will send you an email with instructions for how to pay via direct Deb
 </label>
 </legend>
 </fieldset>
+<div class='go-to-step two back'>
+<i class='fa fa-arrow-left'></i>
+Go Back
+</div>
 </div>
 
 </div>
