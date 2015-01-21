@@ -59,11 +59,12 @@
 				%input{:type=> "text", :name=>"postcode"}
 
 			%label
-				Job Title
+				Job Title / Company
 				%input{:type=> "text", :name=>"job-title"}
 
 			%label
-				Who referred you?
+				How did you hear about us?
+				%span please specify any names or Rainmaker references
 				%input{:type=> "text", :name=>"referral"}
 
 	%fieldset#partner.family
@@ -147,3 +148,7 @@
 			%label
 				School
 				%input{:type=> "email", :name=>"child2-school"}
+				
+	.go-to-step.two
+		Next step
+		%i.fa.fa-arrow-right

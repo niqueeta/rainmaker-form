@@ -10,7 +10,7 @@ header {
 
 .container {
 	width: 800px;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 }
 
 .logo,
@@ -66,6 +66,32 @@ header {
 	display: block;
 }
 
+.go-to-step {
+	cursor: pointer;
+	background-color: $blue;
+	color: $white;
+	margin: 0 auto;
+	width: 500px;
+	text-align: left;
+	padding: 20px;
+
+	i {
+		float: right;
+		color: $white;
+	}
+
+	&.back {
+		width: auto;
+		text-align: center;
+		background-color: transparent;
+		color: $blue;
+		i {
+			float: none;
+			color: $blue;
+		}
+	}
+}
+
 fieldset {
 	background-color: $white;
 	padding: 40px;
@@ -84,12 +110,13 @@ fieldset {
 	}
 }
 
-// #personal-details,
-// #partner,
-// #child1,
-// #child2 {
-// 	display: none;
-// }
+#personal-details,
+#partner,
+#child1,
+#child2,
+#last-step {
+	display: none;
+}
 
 .child1-details,
 .child2-details {

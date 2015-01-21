@@ -2,9 +2,9 @@
 	%fieldset
 		%legend
 			How often would you like to donate?
-		%form
+		%form.frequency
 			%label 
-				%input{:type=> "radio", :name=>"donation-frequency", :value=>"annual"}
+				%input{:checked=>"checked",:type=> "radio", :name=>"donation-frequency", :value=>"annual"}
 				Annualy
 
 			%label 
@@ -14,18 +14,18 @@
 	%fieldset
 		%legend
 			How much would you like to donate?
-		%form
+		%form.donation-amount
 			%label 
 				%input{:type=> "radio", :name=>"donation-amount", :value=>"1000"}
 				£1,000 / year
 
 			%label 
 				%input{:type=> "radio", :name=>"donation-amount", :value=>"3000"}
-				£3,000 / year
+				£1,500 / year
 
 			%label 
 				%input{:type=> "radio", :name=>"donation-amount", :value=>"5000"}
-				£5,000 / year
+				£2,000 / year
 
 			%label 
 				%input{:type=> "radio", :name=>"donation-amount", :value=>"other-amount"}
@@ -37,24 +37,28 @@
 		%legend
 			How would you like to pay?
 
-		%form
+		%form.pay-method
 			%label
-				%input.pay-method{:type=> "radio", :name=>"donation-method", :value=>"direct-debit"}
+				%input{:type=> "radio", :name=>"donation-method", :value=>"direct-debit"}
 				Direct Debit
 
 			%label
-				%input.pay-method{:type=> "radio", :name=>"donation-method", :value=>"credit-card"}
+				%input{:type=> "radio", :name=>"donation-method", :value=>"credit-card"}
 				Credit Card
 				%span 
 					You will be redirected to a PayPal payment page
 					%i
 
 			%label
-				%input.pay-method{:type=> "radio", :name=>"donation-method", :value=>"cheque"}
+				%input{:type=> "radio", :name=>"donation-method", :value=>"cheque"}
 				Cheque
 
-	%fieldset.payment-instructions
+	%fieldset#last-step
 		%legend
 			Great! We will send you an email with instructions for how to pay via direct Debit.
 			%label
 				%input.call-to-action{:type=>"submit",  :name=>"join", :value=>"Join the Rainmaker Foundation"}
+
+	.go-to-step.two.back
+		%i.fa.fa-arrow-left
+		Go Back
