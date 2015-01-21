@@ -174,10 +174,11 @@
 				%input{:type=> "checkbox", :name=>"partner-areas-of-expertise", :value=>"other"}
 				Other
 				%input.other{:type=> "text", :name=>"other-area-of-expertise"}
-	.go-to-step.two
-		Next step
+
+	%a.go-to-step{:href=>"#step3"}
+		Go to Step 3 of 3
 		%i.fa.fa-arrow-right
 		
-	.go-to-step.one.back
+	%a.go-to-step.back{:href=>"#step1"}
 		%i.fa.fa-arrow-left
-		Go Back
+		Back to Step 1 of 3

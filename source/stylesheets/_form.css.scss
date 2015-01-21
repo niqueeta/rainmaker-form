@@ -58,15 +58,8 @@ header {
 	}
 }
 
-.content {
-	display: none;
-}
-
-#step1 {
-	display: block;
-}
-
 .go-to-step {
+	display: block;
 	cursor: pointer;
 	background-color: $blue;
 	color: $white;
@@ -110,19 +103,20 @@ fieldset {
 	}
 }
 
+#step1 {
+	display: block;
+}
+
+.go-to-step[href="#step2"],
+.content,
 #personal-details,
 #partner,
 #child1,
 #child2,
-#last-step {
-	display: none;
-}
-
+#last-step,
+.partner-address,
 .child1-details,
-.child2-details {
-	display: none;
-}
-
+.child2-details,
 .areas-of-expertise,
 .partner-areas-of-expertise {
 	display: none;
@@ -139,7 +133,6 @@ fieldset {
 }
 
 form {
-
 	label {
 		cursor: pointer;
 		font-size: 13px;
@@ -149,6 +142,12 @@ form {
 		display: block;
 		&:hover {
 			color: darken($blue, 10%);
+		}
+		&.inner {
+			display: none;
+			input {
+				margin-left: 20px;
+			}
 		}
 	}
 
@@ -173,10 +172,15 @@ form {
 		border: 0 none;
 		margin-top: 8px;
 	}
+
 	input[name="postcode"],
 	input[name="partner-postcode"],
 	input[type="date"] {
 		width: 55%;
+	}
+
+	input[name="phone"] {
+		display: none;
 	}
 
 	input.other {
@@ -187,10 +191,6 @@ form {
 			width: 30%;
 		}
 	}
-}
-
-.partner-address {
-	display: none;
 }
 
 .family-member {
