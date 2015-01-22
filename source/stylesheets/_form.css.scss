@@ -107,7 +107,7 @@ fieldset {
 
 .go-to-step[href="#step2"],
 .content,
-#personal-details,
+.personal-details,
 #partner,
 #child1,
 #child2,
@@ -131,7 +131,6 @@ fieldset {
 }
 
 form {
-
 	label {
 		cursor: pointer;
 		font-size: 13px;
@@ -222,7 +221,6 @@ span {
 
 .membership-type,
 .charity-sectors {
-
 	.option {
 		vertical-align: top;
 		width: 49%;
@@ -234,7 +232,7 @@ span {
 		display: inline-block;
 		text-align: center;
 		border: 2px solid $light-grey;
-		min-height: 187px;
+		min-height: 255px;
 
 		&:nth-child(2n) {
 			margin-right: 0;
@@ -302,7 +300,7 @@ span {
 		}
 
 		i {
-			font-size: 22px;
+			font-size: 26px;
 			margin-bottom: 5px;
 		}
 

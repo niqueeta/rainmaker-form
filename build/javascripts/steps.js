@@ -3,6 +3,7 @@ $("a.go-to-step").click(function(event) {
 	var active = $(this).attr("href");
 	$(".content").not(active).css("display", "none");
 	$(active).fadeIn();
+	window.scrollTo(0, 0);
 
 	if( active === "#step1" ){
 		$(".tab-step1").addClass("current");
@@ -31,22 +32,22 @@ $('input[name=method-of-contact').click(function (e) {
 
 // final step instructions
 $('.pay-method input[value=direct-debit]').click(function (e) {
-	$("#last-step").html("<legend>Great! We will send you an email with instructions for how to pay via direct Debit.<label><input class='call-to-action' type='submit' name='join' value='Join the Rainmaker Foundation'></input></label></legend>");
+	$("#last-step").html("<legend>Thank you! We will send you an email with instructions for how to pay via direct Debit.<label><input class='call-to-action' type='submit' name='join' value='Join the Rainmaker Foundation'></input></label></legend>");
 });
 
 $('.pay-method input[value=direct-debit]').click(function (e) {
 	$("#last-step").css("display", "block");
-	$("#last-step").html("<legend>Great! We will send you an email with instructions for how to pay via Direct Debit.<label><input class='call-to-action' type='submit' name='join' value='Join the Rainmaker Foundation'></input></label></legend>");
+	$("#last-step").html("<legend>Thank you! We will send you an email with instructions for how to pay via Direct Debit.<label><input class='call-to-action' type='submit' name='join' value='Become a Rainmaker'></input></label></legend>");
 });
 
 $('.pay-method input[value=cheque]').click(function (e) {
 	$("#last-step").css("display", "block");
-	$("#last-step").html("<legend>Great! We will send you an email with instructions for how to pay via cheque.<label><input class='call-to-action' type='submit' name='join' value='Join the Rainmaker Foundation'></input></label></legend>");
+	$("#last-step").html("<legend>Thank you! We will send you an email with instructions for how to pay via cheque.<label><input class='call-to-action' type='submit' name='join' value='Become a Rainmaker'></input></label></legend>");
 });
 
 $('.pay-method input[value=credit-card]').click(function (e) {
 	$("#last-step").css("display", "block");
-	$("#last-step").html("<legend>Great! We will now redirect you to a PayPal page where you will be able to pay via Credit Card.<label><input class='call-to-action' type='submit' name='join' value='Join the Rainmaker Foundation'></input></label></legend>");
+	$("#last-step").html("<legend>Great! We will now redirect you to a PayPal page where you will be able to pay via Credit Card.<label><input class='call-to-action' type='submit' name='join' value='Become a Rainmaker'></input></label></legend>");
 });
 
 
@@ -67,7 +68,7 @@ $('.membership-type .option').click(function (e) {
 	$(this).siblings().removeClass("selected");
 	$(this).addClass("selected");
   $(this).find('.option-radio').prop('checked', true);
-  $('#personal-details').css("display", "block");
+  $('.personal-details').css("display", "block");
 	if( $('.membership-type input[value=individual]').is(':checked')) {
 		$('.family').css("display", "block");
 		donation("year", "1,000", "1,500", "2,000");
@@ -100,7 +101,7 @@ $('.frequency input[value=annual]').click(function (e) {
 $('.frequency input[value=monthly]').click(function (e) {
 	if( $('.membership-type input[value=individual]').is(':checked')) {
 		$('.family').css("display", "block");
-		donation("month", "85", "125", "167");
+		donation("month", "85", "125", "165");
 
 	}if( $('.membership-type input[value=family]').is(':checked')) {
 		$('.family').css("display", "none");
@@ -108,7 +109,7 @@ $('.frequency input[value=monthly]').click(function (e) {
 
 	}if( $('.membership-type input[value=company]').is(':checked')) {
 		$('.family').css("display", "none");
-		donation("month", "417", "625", "834");
+		donation("month", "415", "625", "835");
 	} else {}
 });
 

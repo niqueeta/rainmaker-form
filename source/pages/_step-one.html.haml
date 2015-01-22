@@ -19,7 +19,7 @@
 					%i.fa.fa-users
 					%label Family
 				%ul
-					%li 2-4 people
+					%li 3 people
 					%li Suggested minimum donation £3,000/year
 
 			.option>
@@ -29,9 +29,9 @@
 					%label Company
 				%ul
 					%li 1 company
-					%li Suggested minimum donation £6,000/year
+					%li Suggested minimum donation £5,000/year
 
-	%fieldset#personal-details
+	%fieldset.personal-details
 		%legend
 			Personal Details
 
@@ -62,26 +62,36 @@
 				%span please specify any names or Rainmaker references
 				%input{:type=> "text", :name=>"referral"}
 
+	%fieldset.personal-details
+		%legend
+			What's the best way to reach you?
+
 			%label
 				%input{:type=> "radio", :name=>"method-of-contact", :value=>"phone"}
-				Contact me by phone
+				By phone
 				%input{:type=> "tel", :name=>"phone"}
 				%label.inner
 					%input{:type=> "radio", :name=>"time-of-contact", :value=>"am"}
-					AM
+					preferably in the morning
 					%input{:checked=>"checked", :type=> "radio", :name=>"time-of-contact", :value=>"pm"}
-					PM
+					preferably in the afternoon
 
 			%label
 				%input{:checked=>"checked", :type=> "radio", :name=>"method-of-contact", :value=>"email"}
-				Contact me by email
+				By email
 				%input{:type=> "email", :name=>"email"}
+
+			%label
+				Twitter handle or Linkedin profile
+				%span
+					Optional
+				%input{:type=> "text", :name=>"social-media"}
 
 	%fieldset#partner.family
 		%form.family-member
 			%label
 				%input{:type=>"checkbox", :name=>"family-member", :value=>"partner", :checked=>"checked"}
-				I have a partner
+				My partner's details are
 
 		%form.partner-details
 			%label
@@ -125,7 +135,7 @@
 		%form.family-member
 			%label
 				%input{:type=>"checkbox", :name=>"family-member", :value=>"child1"}
-				I have a child
+				My child's details are
 
 		%form.child1-details
 			%label
@@ -139,26 +149,7 @@
 			%label
 				School
 				%input{:type=> "email", :name=>"child1-school"}
-	
-	%fieldset#child2.family
-		%form.family-member
-			%label
-				%input{:type=>"checkbox", :name=>"family-member", :value=>"child2"}
-				I have another child
-
-		%form.child2-details
-			%label
-				Name
-				%input{:type=> "text", :name=>"child2-name"}
-
-			%label
-				Date of Birth
-				%input{:type=> "date", :name=>"child2-date-of-birth"}
-
-			%label
-				School
-				%input{:type=> "email", :name=>"child2-school"}
 				
 	%a.go-to-step{:href=>"#step2"}
-		Go to Step 2 of 3
+		Go to Step 2/3
 		%i.fa.fa-arrow-right
