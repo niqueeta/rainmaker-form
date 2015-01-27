@@ -1,38 +1,3 @@
-$('form#apply').submit(function (e) {
-	e.preventDefault();
-	//console.log($(this).serialize());
-	// var mailform = "http://www.rainmakerfoundation.org/send-apply-complete-new.php";
-	var mailform = "../send-apply-complete-new.php";
-	$.post(mailform, $(this).serialize())
-	.done(function(data){
-		console.log('this went well', data);
-		// Paypal submit
-		if ( $('input[value=credit-card').is(':checked') ) {
-			console.log('not creditcard');
-			$('form#paypal').submit();
-		}
-		// /páypalsubmíto
-	})
-	.fail(function(data){
-		console.error('oh noes', data);
-
-	});
-
-	return false;
-});
-
-$('#submit-button').click(function (e) {
-	console.log("Here");
-
-	e.preventDefault();
-	if ( $('input[value=credit-card').is(':checked') ) {
-		
-	} else {
-		
-	}
-	return false;
-});
-
 $("a.go-to-step").click(function(event) {
 	event.preventDefault();
 	var active = $(this).attr("href");

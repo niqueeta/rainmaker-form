@@ -3,97 +3,91 @@
 		%legend
 			How would you like to join the Rainmaker Foundation?
 
-		%form
-			.option>
-				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"individual"}
-				.icon
-					%i.fa.fa-user
-					%label Individual
-				%ul
-					%li 1 person
-					%li Suggested minimum donation £1,000/year
+		.option>
+			%input.option-radio{:type=> "radio", :name=>"membership", :value=>"individual"}
+			.icon
+				%i.fa.fa-user
+				%label Individual
+			%ul
+				%li 1 person
+				%li Suggested minimum donation £1,000/year
 
-			.option>
-				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"family"}
-				.icon
-					%i.fa.fa-users
-					%label Family
-				%ul
-					%li 3 people
-					%li Suggested minimum donation £3,000/year
+		.option>
+			%input.option-radio{:type=> "radio", :name=>"membership", :value=>"family"}
+			.icon
+				%i.fa.fa-users
+				%label Family
+			%ul
+				%li up to 2 adults and 2 children
+				%li Suggested minimum donation £3,000/year
 
-			.option>
-				%input.option-radio{:type=> "radio", :name=>"membership", :value=>"company"}
-				.icon
-					%i.fa.fa-briefcase
-					%label Company
-				%ul
-					%li 1 company
-					%li Suggested minimum donation £5,000/year
+		.option>
+			%input.option-radio{:type=> "radio", :name=>"membership", :value=>"company"}
+			.icon
+				%i.fa.fa-briefcase
+				%label Company
+			%ul
+				%li 1 company
+				%li Suggested minimum donation £5,000/year
 
 	%fieldset.personal-details
 		%legend
 			Personal Details
+		%label
+			Name
+			%input{:type=> "text", :name=>"name"}
 
-		%form
-			%label
-				Name
-				%input{:type=> "text", :name=>"name"}
+		%label
+			Date of Birth
+			%input{:type=> "date", :name=>"date-of-birth"}
 
-			%label
-				Date of Birth
-				%input{:type=> "date", :name=>"date-of-birth"}
+		%label
+			Home Address
+			%input{:type=> "text", :name=>"address-line1"}
+			%input{:type=> "text", :name=>"address-line2"}
 
-			%label
-				Home Address
-				%input{:type=> "text", :name=>"address-line1"}
-				%input{:type=> "text", :name=>"address-line2"}
+		%label
+			Postcode
+			%input{:type=> "text", :name=>"postcode"}
 
-			%label
-				Postcode
-				%input{:type=> "text", :name=>"postcode"}
+		%label
+			Job Title / Company
+			%input{:type=> "text", :name=>"job-title"}
 
-			%label
-				Job Title / Company
-				%input{:type=> "text", :name=>"job-title"}
-
-			%label
-				How did you hear about us?
-				%span please specify any names or Rainmaker references
-				%input{:type=> "text", :name=>"referral"}
+		%label
+			How did you hear about us?
+			%span please name any Rainmaker references
+			%input{:type=> "text", :name=>"referral"}
 
 	%fieldset.personal-details
 		%legend
 			What's the best way to reach you?
+		%label
+			%input{:type=> "radio", :name=>"method-of-contact", :value=>"phone"}
+			By phone
+			%input{:type=> "tel", :name=>"phone"}
+			%label.inner
+				%input{:type=> "radio", :name=>"time-of-contact", :value=>"am"}
+				preferably in the morning
+				%input{:checked=>"checked", :type=> "radio", :name=>"time-of-contact", :value=>"pm"}
+				preferably in the afternoon
 
-			%label
-				%input{:type=> "radio", :name=>"method-of-contact", :value=>"phone"}
-				By phone
-				%input{:type=> "tel", :name=>"phone"}
-				%label.inner
-					%input{:type=> "radio", :name=>"time-of-contact", :value=>"am"}
-					preferably in the morning
-					%input{:checked=>"checked", :type=> "radio", :name=>"time-of-contact", :value=>"pm"}
-					preferably in the afternoon
+		%label
+			%input{:checked=>"checked", :type=> "radio", :name=>"method-of-contact", :value=>"email"}
+			By email
+			%input{:type=> "email", :name=>"email"}
 
-			%label
-				%input{:checked=>"checked", :type=> "radio", :name=>"method-of-contact", :value=>"email"}
-				By email
-				%input{:type=> "email", :name=>"email"}
-
-			%label
-				Twitter handle or Linkedin profile
-				%span
-					Optional
-				%input{:type=> "text", :name=>"social-media"}
+		%label
+			Linkedin profile
+			%input{:type=> "text", :name=>"social-media"}
 
 	%fieldset#partner.family
-		%form.family-member
+		.family-member
 			%label
 				%input{:type=>"checkbox", :name=>"family-member", :value=>"partner", :checked=>"checked"}
 				My partner's details are
 
-		%form.partner-details
+		.partner-details
 			%label
 				Name
 				%input{:type=> "text", :name=>"partner-name"}
@@ -132,12 +126,12 @@
 				Yes, I know a young person aged 11-16 who may be interested in a 'Young Rainmakers Workshop'
 
 	%fieldset#child1.family
-		%form.family-member
+		.family-member
 			%label
 				%input{:type=>"checkbox", :name=>"family-member", :value=>"child1"}
 				My child's details are
 
-		%form.child1-details
+		.child1-details
 			%label
 				Name
 				%input{:type=> "text", :name=>"child1-name"}
@@ -151,5 +145,5 @@
 				%input{:type=> "email", :name=>"child1-school"}
 				
 	%a.go-to-step{:href=>"#step2"}
-		Go to Step 2/3
+		Go to step 2/3
 		%i.fa.fa-arrow-right
