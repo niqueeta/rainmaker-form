@@ -3,12 +3,12 @@
 <head>
 <meta charset='utf-8'>
 <title>The Rainmaker Foundation registration form</title>
-<link href="stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
 </head>
 <body class='index'>
 <header>
 <div class='logo'>
-<img src='images/logo-rainmaker.jpg'>
+<img src='/images/logo-rainmaker.jpg'>
 </div>
 <ul class='steps'><li class='tab-step1 current'>
 <a>1. Personal Details</a>
@@ -19,7 +19,7 @@
 </li></ul>
 </header>
 <div class='container'>
-<form action='../send-apply-complete-new.php' method='post' novalidate>
+<form action='../send-apply-complete-new.php' id='apply' method='post' novalidate='true'>
 <div class='content' id='step1'>
 <fieldset class='membership-type'>
 <legend>
@@ -61,7 +61,7 @@ Personal Details
 </legend>
 <label>
 Name
-<input name='name' type='text'>
+<input id='your-name' name='name' type='text'>
 </label>
 <label>
 Date of Birth
@@ -200,7 +200,7 @@ Select as many as you like!
 Children and Young People
 <span>
 <p></p>
-e.g. Initiatives supporting under-25s
+Initiatives supporting under-25s
 <br>
 Aspiration building
 <br>
@@ -214,7 +214,7 @@ Extra-curricular support
 Environment &amp; Energy
 <span>
 <p></p>
-e.g. Climate Change
+Climate Change
 <br>
 Conservation
 <br>
@@ -228,7 +228,7 @@ Clean Energy
 Sustainable Economic Development
 <span>
 <p></p>
-e.g. Social Enterprise
+Social Enterprise
 <br>
 Infrastructure
 <br>
@@ -242,7 +242,7 @@ Alternative Financial Models
 Health Care
 <span>
 <p></p>
-e.g. Access to Care
+Access to Care
 <br>
 Medical Research
 <br>
@@ -256,7 +256,7 @@ Practitioner Training
 Human Rights
 <span>
 <p></p>
-e.g. Peace and Reconciliation
+Peace and Reconciliation
 <br>
 Community Cohesion
 <br>
@@ -270,7 +270,7 @@ Social Justice
 Education
 <span>
 <p></p>
-e.g. Literacy and Numeracy
+Literacy and Numeracy
 <br>
 Access to Education
 <br>
@@ -284,7 +284,7 @@ Quality of Education
 Social Change
 <span>
 <p></p>
-e.g. Elderly
+Elderly
 <br>
 Women and Girls
 <br>
@@ -298,7 +298,7 @@ Disability
 Media, Arts &amp; Culture
 <span>
 <p></p>
-e.g. Widening Audiences
+Widening Audiences
 <br>
 Freedom of Expression
 <br>
@@ -554,8 +554,8 @@ Opening a personal charity account
 Receiving bespoke donor advice
 </label>
 <label>
-<input class='donating-time' name='partner-rainmaker-interests' type='checkbox' value='donating-time'>
-Volunteering my time
+<input class='partner-donating-time' name='partner-rainmaker-interests' type='checkbox' value='donating-time'>
+Volunteering their time
 </label>
 </div>
 </fieldset>
@@ -663,7 +663,7 @@ Cheque
 <legend>
 Great! We will send you an email with instructions for how to pay via direct Debit.
 <label>
-<input class='call-to-action' name='join' type='submit' value='Become a Rainmaker!'>
+<input id='submit-button' name='join' type='submit' value='Become a Rainmaker!'>
 </label>
 </legend>
 </fieldset>
@@ -687,8 +687,14 @@ Back to Step 2/3
 </div>
 
 </form>
+<form action='https://www.paypal.com/cgi-bin/webscr' id='paypal' method='post' target='_top'>
+<input name='cmd' type='hidden' value='_s-xclick'>
+<input name='hosted_button_id' type='hidden' value='GH5CCFAJKWDZS'>
+<!-- %input{:type=>"image", :src=>"https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif", :name=>"submit", :alt=>"PayPal"} -->
+<!-- %img{:alt=>"yeah", :border=>"0", :src=>"https://www.paypalobjects.com/en_GB/i/scr/pixel.gif", :width=>"1", :height=>"1"} -->
+</form>
 </div>
 
-<script src="javascripts/all.js" type="text/javascript"></script>
+<script src="/javascripts/all.js" type="text/javascript"></script>
 </body>
 </html>
