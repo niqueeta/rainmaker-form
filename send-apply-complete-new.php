@@ -31,7 +31,6 @@
 		$social_media = $_POST['social-media'];
 
 		// -> membership == family {
-			$family_member = $_POST['family-member'];
 			$partner_name = $_POST['partner-name'];
 			$partner_date_of_birth = $_POST['partner-date-of-birth'];
 			$partner_email = $_POST['partner-email'];
@@ -47,13 +46,17 @@
 			$young_rainmakers_workshop =  $_POST['young-rainmakers-workshop'];
 
 			// Child - name clash issue
-			$child_family_member = $_POST['family-member'];
 			$child1_name = $_POST['child1-name'];
 			$child1_date_of_birth = $_POST['child1-date-of-birth'];
 			$child1_school = $_POST['child1-school'];
 		// }
 
-		$charity_sector_interests = $_POST['charity-sector-interests'];
+		$charity_sector_interests = $_POST['charity-sector-interests'];	 
+    echo("Multiple interests: ");
+    $N = count($charity_sector_interests);
+    for($i=0; $i < $N; $i++)
+    { echo($charity_sector_interests[$i] . " ");}
+
 		$other_charity_sector = $_POST['other-charity-sector'];
 		$charities_already_involved_with = $_POST['charities-already-involved-with'];
 		$rainmaker_interests = $_POST['rainmaker-interests'];
@@ -124,7 +127,7 @@
    
            //sender --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
  	//====================================================
-	$email_sender = "niqueeta@gmail.com"; // deve ser um email do dominio
+	$email_sender = "abbie@rainmakerfoundation.org"; // deve ser um email do dominio
 	//====================================================
  
  
@@ -146,17 +149,17 @@
 	//====================================================
 	if (mail ($email_recipient, $email_subject, nl2br($msg), $email_headers)){
 		?>
-               <script language= "JavaScript">
+       <script language= "JavaScript">
 
-                alert('Thank you! We Will be in touch soon');
-                location.href="apply.php";
-                
-                </script>
-                <?php
+        alert('Thank you! We Will be in touch soon');
+        location.href="apply.php";
+        
+        </script>
+        <?php
 	}
   	else{
 		echo "<script>alert('Erro ao enviar: $mail->ErrorInfo');</script>";
-                echo "<script>history.go(-1);</script>";
+    echo "<script>history.go(-1);</script>";
 	}
 	//====================================================
 
