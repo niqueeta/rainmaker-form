@@ -150,7 +150,7 @@
                <script language= "JavaScript">
 
                 alert('Thank you! We Will be in touch soon');
-                location.href="apply.php";
+                location.href="http://moniq.co";
                 
                 </script>
                 <?php

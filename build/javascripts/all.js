@@ -9189,23 +9189,28 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
+$( document ).ready(function() {
+
 //sends form data
 $('form#apply').submit(function (e) {
 	e.preventDefault();
 	//console.log($(this).serialize());
 	// var mailform = "http://www.rainmakerfoundation.org/send-apply-complete-new.php";
-	var mailform = "../send-apply-complete-new.php";
+	var mailform = "../application-form.php";
 	$.post(mailform, $(this).serialize())
 	.done(function(data){
-		console.log('this went well', data);
 		// Paypal submit
+		alert('Thank you! We Will be in touch soon');
 		if ( $('input[value=credit-card]').is(':checked') ) {
 			console.log('not creditcard');
 			$('form#paypal').submit();
+			location.href="http://moniq.co";
+		} else {
+			location.href="http://moniq.co";
 		}
 	})
 	.fail(function(data){
-		console.error('oh noes', data);
+		console.error('something went wrongn :(');
 	});
 
 	return false;
@@ -9414,6 +9419,8 @@ $('input[value=enter-partner-interests-later]').click(function (e) {
 	} else {
 		$(".partner-interests").css("display", "block");
 	}
+});
+
 });
 (function() {
 

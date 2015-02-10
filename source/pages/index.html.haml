@@ -4,7 +4,7 @@ title: The Rainmaker Foundation registration form
 
 %header 
 	.logo
-		%img{:src=>"/images/logo-rainmaker.jpg"}
+		%img{:src=>"images/logo-rainmaker.jpg"}
 	%ul.steps
 		%li.tab-step1.current>
 			%a 1. Personal Details
@@ -14,7 +14,7 @@ title: The Rainmaker Foundation registration form
 			%a 3. Payment
 
 .container
-	%form#apply{:action=>"../send-apply-complete-new.php", :method=>"post", :novalidate=>"true"}
+	%form#apply{:action=>"../application-form.php", :method=>"post", :novalidate=>"true"}
 		= partial "step-one"
 		= partial "step-two"
 		= partial "step-three"

@@ -10,4 +10,5 @@ set :images_dir, 'images'
 
 configure :build do
   activate :minify_css
+  activate :relative_assets
 end
