@@ -45,7 +45,7 @@ $("a.go-to-step").click(function(event) {
 });
 
 //shows/hides input based on method of content
-$('input[name=method-of-contact').click(function (e) {
+$('input[name=method-of-contact]').click(function (e) {
 	if ( $(this).is(':checked') ) {
 		$(this).siblings().css("display", "block");
 	} else {
