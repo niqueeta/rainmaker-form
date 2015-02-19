@@ -1,28 +1,30 @@
 $( document ).ready(function() {
 
-//sends form data
-$('form#apply').submit(function (e) {
-	e.preventDefault();
-	//console.log($(this).serialize());
-	// var mailform = "http://www.rainmakerfoundation.org/send-apply-complete-new.php";
-	var mailform = "../application-form.php";
-	$.post(mailform, $(this).serialize())
-	.done(function(data){
-		// Paypal submit
-		alert('Thank you! We Will be in touch soon');
-		if ( $('input[value=credit-card]').is(':checked') ) {
-			console.log('not creditcard');
-			$('form#paypal').submit();
-			location.href="http://moniq.co";
-		} else {
-			location.href="http://moniq.co";
-		}
-	})
-	.fail(function(data){
-		console.error('something went wrongn :(');
-	});
-
-	return false;
+// Setup form validation.
+$.validate({
+	form: '#apply',
+	// validateOnBlur: false,
+	onSuccess: function () {
+		//console.log($(this).serialize());
+		// var mailform = "http://www.rainmakerfoundation.org/send-apply-complete-new.php";
+		var mailform = "../application-form.php";
+		$.post(mailform, $(this).serialize())
+		.done(function(data){
+			// Paypal submit
+			alert('Thank you! We Will be in touch soon');
+			if ( $('input[value=credit-card]').is(':checked') ) {
+				console.log('not creditcard');
+				$('form#paypal').submit();
+				location.href="http://moniq.co";
+			} else {
+				location.href="http://moniq.co";
+			}
+		})
+		.fail(function(data){
+			console.error('something went wrong :(');
+		});
+		return false;
+	}
 });
 
 //shows/hides content depending on which step
