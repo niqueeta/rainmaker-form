@@ -146,13 +146,13 @@
    
            //sender --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
  	//====================================================
-	$email_sender = "hello@moniq.co"; // deve ser um email do dominio
+	$email_sender = $email; // deve ser um email do dominio
 	//====================================================
  
  
 	//Email configurations
 	//====================================================
-	$email_recipient = "niqueeta@gmail.com"; // qualquer email pode receber os dados
+	$email_recipient = "friends@rainmakerfoundation.org"; // qualquer email pode receber os dados
 	$email_reply = "$email_recipient";
 	$email_subject = "Application form";
 	//====================================================
