@@ -35,7 +35,7 @@
 			Personal Details
 		%label
 			Name
-			%input#your-name{:type=> "text", :name=>"name"}
+			%input#your-name{:type=> "text", :name=>"name", :data => {"validation" => "length", "validation-length" => "1,100", "validation-error-msg" => "Please enter your name."}}
 
 		%label
 			Date of Birth
@@ -43,12 +43,12 @@
 
 		%label
 			Home Address
-			%input{:type=> "text", :name=>"address-line1"}
+			%input{:type=> "text", :name=>"address-line1", :data => {"validation" => "length", "validation-length" => "1,100", "validation-error-msg" => "Please enter the first line of your address."}}
 			%input{:type=> "text", :name=>"address-line2"}
 
 		%label
 			Postcode
-			%input{:type=> "text", :name=>"postcode"}
+			%input{:type=> "text", :name=>"postcode", :data => {"validation" => "length", "validation-length" => "3,10", "validation-error-msg" => "Please enter your postcode."}}
 
 		%label
 			Job Title / Company

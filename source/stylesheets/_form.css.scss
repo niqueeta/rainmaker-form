@@ -338,3 +338,19 @@ span {
 		}
 	}
 }
+
+/* Styles for form validation. */
+
+.form-error {
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+input.valid {
+	border: 1px solid green;
+}
+
+input.error {
+	border: 1px solid red;
+}
