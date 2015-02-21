@@ -144,6 +144,7 @@ header('Content-type: application/json');
 require_once('PHPMailer/class.phpmailer.php');
 
 $mail = new PHPMailer();
+$mail->Subject = "Rainmaker Application Form - $name";
 $mail->SetFrom(EMAIL_RECIPIENT, 'Rainmaker Application Form');
 $mail->AddReplyTo($email, $name);
 $mail->IsHTML(true);
