@@ -75,7 +75,7 @@ header {
 }
 
 .go-to-step {
-	display: block;
+	display: none !important;
 	cursor: pointer;
 	background-color: $blue;
 	color: $white;
@@ -125,7 +125,6 @@ fieldset {
 	display: block;
 }
 
-.go-to-step[href="#step2"],
 .content,
 .personal-details,
 #partner,
@@ -345,6 +344,9 @@ span {
 	color: red;
 	font-weight: bold;
 	font-size: 14px;
+	&.blue {
+		color: $blue;
+	}
 }
 
 input.valid {

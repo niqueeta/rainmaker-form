@@ -1,9 +1,8 @@
-$( document ).ready(function() {
+
 
 // Setup form validation.
 $.validate({
 	form: '#apply',
-	// validateOnBlur: false,
 	onSuccess: function () {
 		//console.log($(this).serialize());
 		$.post('application-form.php', $('#apply').serialize())
@@ -26,24 +25,6 @@ $.validate({
 	}
 });
 
-//shows/hides content depending on which step
-$("a.go-to-step").click(function(event) {
-	function goToStep(stepNumber) {
-		if( active === "#step" + stepNumber ){
-			$(".tab-step" + stepNumber).addClass("current");
-			$(".tab-step" + stepNumber).siblings().removeClass("current"); 
-		}
-	}
-
-	event.preventDefault();
-	var active = $(this).attr("href");
-	$(".content").not(active).css("display", "none");
-	$(active).fadeIn();
-	window.scrollTo(0, 0);
-	goToStep("1");	
-	goToStep("2");
-	goToStep("3");
-});
 
 //shows/hides input based on method of content
 $('input[name=method-of-contact]').click(function (e) {
@@ -85,9 +66,28 @@ $('.membership-type .option').click(function (e) {
 });
 
 
+// selecting other text field automatically selects input
+function radioActions(frequency, low) {
+	$('input[type=text]').focus(function (e) {
+		$(this).siblings().prop('checked', true);
+	});
+
+	$('input[name="donation-amount"]').click(function (e) {
+		$(".minimum-donation-alert").remove();
+	});
+
+	$('input.other.amount').focus(function (e) {		
+		$(this).parent().after("<div class='minimum-donation-alert form-error blue'>Please note the suggested minimum donation is £"+low+" / "+frequency+"</div>");
+	});
+}
+
+radioActions();
+
+
 // donation amount based on frequency and membership-type
 function donation(frequency, low, mid, high) {
-	$(".donation-amount").html("<label><input type='radio' name='donation-amount' value='" + low + "'>£" + low + " / " + frequency + " </input></label><label><input type='radio' name='donation-amount' value='" + mid + "'>£" + mid + " / " + frequency + " </input></label><label><input type='radio' name='donation-amount' donation-value='" + high + "'>£" + high + " / " + frequency + " </input></label><label><input type='radio' name='donation-amount' value='other-amount'></input>£<input class='other amount' type='text' name='other-amount'></input> / " + frequency + "</label>");
+	$(".donation-amount").html("<label><input type='radio' name='donation-amount' value='" + low + "'>£" + low + " / " + frequency + " </input></label><label><input type='radio' name='donation-amount' value='" + mid + "' checked>£" + mid + " / " + frequency + " </input></label><label><input type='radio' name='donation-amount' donation-value='" + high + "'>£" + high + " / " + frequency + " </input></label><label><input type='radio' name='donation-amount' value='other-amount'></input>£<input class='other amount' type='text' name='other-amount'></input> / " + frequency + "</label>");
+	radioActions(frequency, low);
 }
 
 function AnnualValues() {
@@ -125,6 +125,8 @@ $('.membership-type .option').click(function (e) {
 	$(this).addClass("selected");
   $(this).find('.option-radio').prop('checked', true);
   $('.personal-details').css("display", "block");
+  $('#step2').css("display", "block");
+  $('#step3').css("display", "block");
 	AnnualValues();
 });
 
@@ -134,12 +136,6 @@ $('.frequency input[value=annual]').click(function (e) {
 
 $('.frequency input[value=monthly]').click(function (e) {
 	MonthlyValues();
-});
-
-
-// selecting other text field automatically selects input
-$('input[type=text]').click(function (e) {
-	$(this).siblings().prop('checked', true);
 });
 
 
@@ -156,10 +152,6 @@ $('.membership-type .option').click(function (e) {
 	} else {
 		$('.family').css("display", "none");
 	}
-});
-
-$('input.other').click(function (e) {
-	$(this).siblings().prop('checked', true);
 });
 
 $('.charity-sectors .option').click(function (e) {
@@ -231,4 +223,3 @@ $('input[value=enter-partner-interests-later]').click(function (e) {
 	}
 });
 
-});
