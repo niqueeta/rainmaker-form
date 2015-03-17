@@ -93,7 +93,7 @@ function donation(frequency, low, mid, high) {
 function AnnualValues() {
 	if( $('.membership-type input[value=individual]').is(':checked')) {
 		$('.family').css("display", "block");
-		donation("year", "1,000", "1,500", "2,000");
+		donation("year", "1,000", “3,000", “5,000");
 
 	}if( $('.membership-type input[value=family]').is(':checked')) {
 		$('.family').css("display", "none");
@@ -108,7 +108,7 @@ function AnnualValues() {
 function MonthlyValues() {
 	if( $('.membership-type input[value=individual]').is(':checked')) {
 		$('.family').css("display", "block");
-		donation("month", "85", "125", "165");
+		donation("month", “90”, “250”, “425");
 
 	}if( $('.membership-type input[value=family]').is(':checked')) {
 		$('.family').css("display", "none");
