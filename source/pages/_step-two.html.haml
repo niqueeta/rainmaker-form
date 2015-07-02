@@ -150,12 +150,8 @@
 			Financially supporting a charity
 
 		%label 
-			%input{:type=> "checkbox", :name=>"rainmaker-interests[]", :value=>"opening-personal-account"}
-			Opening a personal charity account
-
-		%label 
-			%input{:type=> "checkbox", :name=>"rainmaker-interests[]", :value=>"receiving-bespoke-advice"}
-			Receiving bespoke donor advice
+			%input{:type=> "checkbox", :name=>"rainmaker-interests[]", :value=>"introducing-my-company-to-rainmaker"}
+			Introducing my company to Rainmaker
 
 		%label 
 			%input.donating-time{:type=> "checkbox", :name=>"rainmaker-interests[]", :value=>"donating-time"}
@@ -163,24 +159,51 @@
 
 	%fieldset.areas-of-expertise
 		%legend
-			What are your areas of expertise?
-		%label 
-			%input{:type=> "checkbox", :name=>"areas-of-expertise[]", :value=>"ceo"}
-			CEO
+			Skills offered
 
 		%label 
-			%input{:type=> "checkbox", :name=>"areas-of-expertise[]", :value=>"accounting"}
-			Accounting
+			%input{:type=> "checkbox", :name=>"areas-of-expertise[]", :value=>"marketing"}
+			Marketing and Communications
 
 		%label 
 			%input{:type=> "checkbox", :name=>"areas-of-expertise[]", :value=>"hr"}
-			HR
+			HR Law and Practices
 
 		%label 
-			%input{:type=> "checkbox", :name=>"areas-of-expertise[]", :value=>"legal"}
-			Legal
+			%input{:type=> "checkbox", :name=>"areas-of-expertise[]", :value=>"accountancy"}
+			Accountancy and Due Diligence
+
+		%label 
+			%input{:type=> "checkbox", :name=>"areas-of-expertise[]", :value=>"digital"}
+			IT and Digital Support
+
+		%label 
+			%input{:type=> "checkbox", :name=>"areas-of-expertise[]", :value=>"business"}
+			Business Management
 
 		%label 
 			%input{:type=> "checkbox", :name=>"areas-of-expertise[]", :value=>"other"}
 			Other
 			%input.other{:type=> "text", :name=>"other-area-of-expertise"}
+
+	%fieldset.areas-of-expertise
+		%legend
+			Estimated Time Commitment
+
+		%label 
+			%input{:type=> "radio", :name=>"time-commitment", :value=>"one-off"}
+			One off
+
+		%label 
+			%input{:type=> "radio", :name=>"time-commitment", :value=>"2-4"}
+			2 - 4 hours / month
+
+		%label 
+			%input{:type=> "radio", :name=>"time-commitment", :value=>"4plus"}
+			4+ hours / month
+
+		%label 
+			%input{:type=> "radio", :name=>"time-commitment", :value=>"other-amount"}
+			£
+			%input.other.amount{:type=> "text", :name=>"other-amount"}
+			per year

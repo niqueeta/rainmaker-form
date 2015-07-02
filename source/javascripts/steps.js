@@ -8,7 +8,7 @@ $.validate({
 		$.post('application-form.php', $('#apply').serialize())
 			.done(function(data){
 				// Paypal submit
-				alert('Thank you! We Will be in touch soon');
+				alert('Thank you for your application to become a Rainmaker - we shall be in touch by the end of the month. Rainmaker Team.');
 				if ( $('input[value=credit-card]').is(':checked') ) {
 					// console.log('not creditcard');
 					$('form#paypal').submit();
@@ -37,26 +37,6 @@ $('input[name=method-of-contact]').click(function (e) {
 	$('input[name=method-of-contact]').not($(this)).siblings().css("display", "none");
 	$(this).siblings().css("display", "block");
 });
-
-
-// Message above Submit button changes according to payment method
-function payMessage(message) {
-	$("#last-step").css("display", "block");
-	$("#last-step").html("<legend>" + message + "<label><input id='submit-button' type='submit' name='join' value='Become a Rainmaker'></input></label></legend>");
-}
-
-$('.pay-method input[value=direct-debit]').click(function (e) {
-	payMessage("Thank you! We will send you an email with instructions for how to pay via Direct Debit.");
-});
-
-$('.pay-method input[value=cheque]').click(function (e) {
-	payMessage("Thank you! We will send you an email with instructions for how to pay via cheque.");
-});
-
-$('.pay-method input[value=credit-card]').click(function (e) {
-	payMessage("Thank you! We will now redirect you to a PayPal page where you will be able to pay via Credit Card.");
-});
-
 
 // selecting other text field automatically selects input
 function radioActions(frequency, low) {

@@ -33,31 +33,10 @@
 				%input.other.amount{:type=> "number", :name=>"other-amount"}
 				per year
 
-	%fieldset
-		%legend
-			How would you like to pay?
-
-		.pay-method
-			%label
-				%input{:type=> "radio", :name=>"donation-method", :value=>"direct-debit"}
-				Direct Debit
-
-			%label
-				%input{:type=> "radio", :name=>"donation-method", :value=>"credit-card"}
-				Credit Card
-				%span 
-					You will be redirected to a PayPal payment page
-					%i
-
-			%label
-				%input{:type=> "radio", :name=>"donation-method", :value=>"cheque"}
-				Cheque
-
 	%fieldset#last-step
 		%legend
-			Great! We will send you an email with instructions for how to pay via direct Debit.
 			%label
-				%input#submit-button{:type=>"submit",  :name=>"join", :value=>"Become a Rainmaker!"}
+				%input#submit-button{:type=>"submit",  :name=>"join", :value=>"Apply to become a Rainmaker"}
 
 	%fieldset
 		%label
@@ -69,7 +48,3 @@
 
 		%span
 			* Please remember that what you pay in income/capital gains tax in any tax year must at least equal the amount of tax claimed on your donations by the charities and Community Amateur Sports Clubs that same tax year. Other taxes, such as Council Tax or VAT, do not count for this purpose. The charity will reclaim 25p of tax for every £1 you donate. You can cancel this declaration at any time by contacting us. Please remember that it is your responsibility to notify us if there are any changes to your tax status, name or address.
-
-	%a.go-to-step.back{:href=>"#step2"}
-		%i.fa.fa-arrow-left
-		Back to Step 2/3

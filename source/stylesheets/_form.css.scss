@@ -125,17 +125,7 @@ fieldset {
 	display: block;
 }
 
-.content,
-.personal-details,
-#partner,
-#child1,
-#child2,
-#last-step,
-.partner-address,
-.child1-details,
-.child2-details,
-.areas-of-expertise,
-.partner-areas-of-expertise {
+.areas-of-expertise {
 	display: none;
 }
 
@@ -164,7 +154,9 @@ input[type=radio] {
 	margin-right: 5px;
 }
 
+textarea,
 input[type=text],
+input[type=number],
 input[type=date],
 input[type=email],
 input[type=tel] {
